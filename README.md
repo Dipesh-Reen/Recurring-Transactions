@@ -35,6 +35,10 @@
    * If they can be combined and the old combination has only 1 transaction, add the old combination t1, and then add the new combination t1_t2 only if there does not exist any combination in the result such that the *last_name* and the *mean_period* of that combination matches that of t1_t2. This ensures avoiding redundant additions.  
       * Example: combine(t1, t2)  =>  t1, t1_t2; or,  combine(t1, t2)  =>  t1
       
+* ## Major edge cases handled  
+ * Mutiple recurring transaction sets existing for the same company. In this case, both the possible sets would be provided in the output list
+ * Redundant recurring transactions have been removed. Example, t1_t2_t3_t4 and t2_t3_t4.
+
 * ## Assumptions
   * The tolerance on the deviation for date has been kept as 5 days.
   * The tolerance on the deviation in the amount has been kept as 5 currency units.
