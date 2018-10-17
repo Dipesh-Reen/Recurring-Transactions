@@ -36,8 +36,8 @@
       * Example: combine(t1, t2)  =>  t1, t1_t2; or,  combine(t1, t2)  =>  t1
       
 * ## Major edge cases handled  
- * Mutiple recurring transaction sets existing for the same company. In this case, both the possible sets would be provided in the output list
- * Redundant recurring transactions have been removed. Example, t1_t2_t3_t4 and t2_t3_t4.
+  * Mutiple recurring transaction sets existing for the same company. In this case, both the possible sets would be provided in the output list
+  * Redundant recurring transactions have been removed. Example, t1_t2_t3_t4 and t2_t3_t4.
 
 * ## Assumptions
   * The tolerance on the deviation for date has been kept as 5 days.
