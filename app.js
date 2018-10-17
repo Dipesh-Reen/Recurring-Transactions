@@ -32,20 +32,13 @@ app.get('/', (req, res) => {
         &emsp;&emsp; Output: List of all the transactions till date </div>`);
 });
 
+// API call to fetch all the transactions entered to the system till date
 app.get('/api/transactions', (req, res) => {
     Transaction.getTransactions((error, transactions) => {
         if (error) return res.send(error); 
         res.json(transactions);
     });
 });
-
-// app.get('/api/rec', (req, res) => {
-//     const user_id = req.params.user_id;
-//     Recurring.getRecurringTransactions((error, userRecurrences) => {
-//         if (error) return res.send(error);
-//         res.json(userRecurrences);
-//     });
-// });
 
 // API call to fetch all the recurring transactions for a specific user
 app.get('/api/get_recurring_transactions/:user_id', (req, res) => {
